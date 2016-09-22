@@ -3,6 +3,7 @@
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## Build generated
+.DS_Store
 build/
 DerivedData/
 
@@ -26,6 +27,8 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
+
+LKDBHelperTestCase/Pods/
 
 # CocoaPods
 #

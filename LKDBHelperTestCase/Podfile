@@ -1,0 +1,17 @@
+# Podfile
+platform :ios, '8.0'
+
+def my_pods
+    #pod 'Realm'
+	#LKDBHelper
+	pod 'LKDBHelper'
+    #JSON解析
+    pod 'MJExtension'
+    # Baidu地图
+    #pod 'BaiduMapKit' #百度地图SDK
+end
+
+target 'LKDBHelperTestCase' do
+    my_pods
+end
+
