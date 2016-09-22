@@ -17,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSString* homeDir = NSHomeDirectory();
+    NSLog(@"%@", homeDir);
     return YES;
 }
 

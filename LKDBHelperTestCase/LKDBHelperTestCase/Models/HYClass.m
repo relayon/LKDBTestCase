@@ -48,6 +48,13 @@
 //    return nil;
 //}
 
++ (HYClass*)cls:(NSInteger)cid name:(NSString*)name date:(NSDate*)dt {
+    HYClass* cls = [HYClass new];
+    cls.cId = cid;
+    cls.cName = name;
+    cls.cDate = dt;
+    return cls;
+}
 
 
 @end

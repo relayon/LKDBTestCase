@@ -14,4 +14,6 @@
 @property (copy, nonatomic) NSString* cName;
 @property (strong, nonatomic) NSDate* cDate;
 
++ (HYClass*)cls:(NSInteger)cid name:(NSString*)name date:(NSDate*)dt;
+
 @end

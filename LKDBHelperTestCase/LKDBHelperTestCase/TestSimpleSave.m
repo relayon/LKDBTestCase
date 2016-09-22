@@ -16,7 +16,7 @@
  简单保存一个班级对象
  */
 + (void)saveHYClass {
-    HYClass* cls = [HYClass new];
+    HYClass* cls = [HYClass cls:10 name:@"2000-9" date:[NSDate date]];
     [cls saveToDB];
 }
 
