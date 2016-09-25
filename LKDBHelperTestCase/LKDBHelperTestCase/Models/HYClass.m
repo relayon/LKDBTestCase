@@ -39,7 +39,7 @@
 // 默认使用rowid作为主键
 // rowid是sqlite3的默认主键，详情参考sqlite3文档
 + (NSString*)getPrimaryKey {
-    return @"rowid";
+    return @"cId";
 }
 
 // 指定联合主键

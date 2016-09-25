@@ -34,7 +34,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     if (indexPath.row == 0) {
-        [TestSimpleSave saveHYClass];
+        [TestSimpleSave startTest];
     }
 }
 
