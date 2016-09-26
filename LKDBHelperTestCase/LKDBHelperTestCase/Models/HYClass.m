@@ -7,6 +7,7 @@
 //
 
 #import "HYClass.h"
+#import "MJExtension.h"
 
 /**
     班级
@@ -56,5 +57,18 @@
     return cls;
 }
 
+/* 转化过程中对字典的值进行过滤和进一步转化 */
+- (id)mj_newValueFromOldValue:(id)oldValue property:(MJProperty *)property {
+    if ([property.name isEqualToString:@"cDate"]) {
+        if (oldValue == nil) {
+            return @"";
+        }
+    } else if (property.type.typeClass == [NSDate class]) {
+        NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+        fmt.dateFormat = @"yyyy-MM-dd hh-mm-ss";
+        return [fmt dateFromString:oldValue];
+    }
+    return oldValue;
+}
 
 @end

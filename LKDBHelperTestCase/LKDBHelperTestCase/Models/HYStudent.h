@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HYClass.h"
 
 /**
  学生
@@ -16,5 +17,9 @@
 @property (assign, nonatomic) NSInteger sId;
 @property (copy, nonatomic) NSString* sName;
 @property (strong, nonatomic) NSDate* sDate;
+
+@property (strong, nonatomic) HYClass* sClass;
+
++ (HYStudent*)student:(NSInteger)sid name:(NSString*)name cls:(HYClass*)cls;
 
 @end
