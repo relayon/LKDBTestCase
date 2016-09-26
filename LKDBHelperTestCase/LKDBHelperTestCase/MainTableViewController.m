@@ -8,6 +8,7 @@
 
 #import "MainTableViewController.h"
 #import "TestSimpleSave.h"
+#import "TestOneToOne.h"
 
 @interface MainTableViewController ()
 
@@ -35,6 +36,8 @@
     
     if (indexPath.row == 0) {
         [TestSimpleSave saveHYClass];
+    } else if (indexPath.row == 1) {
+        [TestOneToOne start];
     }
 }
 

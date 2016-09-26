@@ -7,6 +7,9 @@ def my_pods
 	pod 'LKDBHelper'
     #JSON解析
     pod 'MJExtension'
+    pod 'JSONModel'
+    #use_frameworks!
+    #pod 'iOS-Echarts'
     # Baidu地图
     #pod 'BaiduMapKit' #百度地图SDK
 end

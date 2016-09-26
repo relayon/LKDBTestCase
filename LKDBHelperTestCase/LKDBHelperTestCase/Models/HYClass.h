@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JSONModel.h"
 
-@interface HYClass : NSObject
+@interface HYClass : JSONModel
 
 @property (assign, nonatomic) NSInteger cId;
 @property (copy, nonatomic) NSString* cName;
