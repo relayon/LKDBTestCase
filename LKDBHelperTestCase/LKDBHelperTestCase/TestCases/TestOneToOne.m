@@ -25,7 +25,7 @@
 //    NSDate* dd = [LKDBUtils dateWithString:@"2016-09-26 15:01:24"];
 //    NSLog(@"dd = %@", dd);
     
-    [[self class] update];
+//    [[self class] update];
     
     [[self class] save];
     [[self class] save];
@@ -48,8 +48,14 @@
  */
 + (void)save {
     HYClass* cls = [HYClass cls:9 name:@"2009" date:[NSDate date]];
+    NSMutableDictionary* tDic = cls.mj_keyValues;
+    NSString* tStr = tDic.mj_JSONString;
+    HYClass* cls2 = [HYClass mj_objectWithKeyValues:tStr];
     HYStudent* st = [HYStudent student:13 name:@"alekye" cls:cls];
     BOOL status = [st saveToDB];
+    
+//    NSString* str = [cls toJSONString];
+    
     NSLog(@"%s", __FUNCTION__);
 }
 
@@ -71,8 +77,8 @@
     
     HYStudent* st = [HYStudent student:13 name:@"alekyexx" cls:cls];
 //    id sdt = [st valueForKey:@"sDate"];
-//    NSMutableDictionary* tDic = st.mj_keyValues;
-//    NSString* jsonString = st.mj_JSONString;
+    NSMutableDictionary* tDic = st.mj_keyValues;
+    NSString* jsonString = st.mj_JSONString;
     BOOL status = [st updateToDB];
     NSLog(@"%s", __FUNCTION__);
 }
